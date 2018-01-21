@@ -47,3 +47,6 @@ For the program to work properly it is necessary to have the address of the cont
 
 # Establishing your own private network
 Now you need to make sure your central network and your client network can discover themselves. This can be done by either re-defining the contents on the static-nodes.json inside your eth_nodes/geth folder, or by checking https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network information about how to do so.
+
+# Example Node
+Inside programFiles there is a directory called "eth_nodes". This directory is a sample node with some users (information about them can be found under Data/UserDB.db, which has been used to perform tests.
