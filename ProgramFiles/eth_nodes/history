@@ -1,0 +1,501 @@
+eth.blockNumber
+eth.getBalance(eth.coinbase)
+var abi = [{"constant":true,"inputs":[],"name":"creator","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"cond","type":"string"}],"name":"createConditions","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"s","type":"string"}],"name":"stringToUint","outputs":[{"name":"result","type":"uint256"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"_op","type":"string"},{"name":"realValue","type":"string"},{"name":"compareValue","type":"string"}],"name":"compareString","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"s1","type":"string"},{"name":"s2","type":"string"}],"name":"equal","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"_person","type":"address"}],"name":"checkConditionFor","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"data","type":"bytes32"}],"name":"bytes32ToString","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"i","type":"uint16"},{"name":"j","type":"uint16"}],"name":"getChecker","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_cond","type":"string"}],"name":"setChecker","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"name","type":"string"},{"name":"dni","type":"string"},{"name":"age","type":"uint8"}],"name":"checkConditionInCase","outputs":[{"name":"","type":"string"},{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_person","type":"address"}],"name":"check","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"source","type":"string"}],"name":"stringToBytes32","outputs":[{"name":"result","type":"bytes32"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":false,"inputs":[{"name":"_endDay","type":"uint8"},{"name":"_endMonth","type":"uint8"},{"name":"_endYear","type":"uint8"}],"name":"isEnded","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"op","type":"string"},{"name":"realValue","type":"uint8"},{"name":"compareValue","type":"uint256"}],"name":"compareInt","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"inputs":[{"name":"_creator","type":"address"},{"name":"_cond","type":"string"},{"name":"_money","type":"uint8"},{"name":"_endDay","type":"uint8"},{"name":"_endMonth","type":"uint8"},{"name":"_endYear","type":"uint8"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]
+abi
+var instance = eth.contract(abi).at("0x043f81affe63ecf9531a19397dee367a58c804c8")
+instance.equal("hola","hola")
+instance.equal("hola","holad")
+instance.stringToBytes32("hola")
+instance.compareInt(">",3,4)
+instance.compareInt("<",3,4)
+instance.compareInt("<=",3,4)
+instance.checkConditionInCase("victor","vata",8)
+var abi = [{"constant":true,"inputs":[],"name":"creator","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"cond","type":"string"}],"name":"createConditions","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"s","type":"string"}],"name":"stringToUint","outputs":[{"name":"result","type":"uint256"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"_op","type":"string"},{"name":"realValue","type":"string"},{"name":"compareValue","type":"string"}],"name":"compareString","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"s1","type":"string"},{"name":"s2","type":"string"}],"name":"equal","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"_person","type":"address"}],"name":"checkConditionFor","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"a","type":"bytes32"},{"name":"b","type":"bytes32"}],"name":"checkBytes","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"data","type":"bytes32"}],"name":"bytes32ToString","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"i","type":"uint16"},{"name":"j","type":"uint16"}],"name":"getChecker","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_cond","type":"string"}],"name":"setChecker","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"name","type":"string"},{"name":"dni","type":"string"},{"name":"age","type":"uint8"}],"name":"checkConditionInCase","outputs":[{"name":"","type":"bytes32"},{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"s","type":"string"}],"name":"string_tobytes","outputs":[{"name":"","type":"bytes"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_person","type":"address"}],"name":"check","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"source","type":"string"}],"name":"stringToBytes32","outputs":[{"name":"result","type":"bytes32"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":false,"inputs":[{"name":"_endDay","type":"uint8"},{"name":"_endMonth","type":"uint8"},{"name":"_endYear","type":"uint8"}],"name":"isEnded","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"op","type":"string"},{"name":"realValue","type":"uint8"},{"name":"compareValue","type":"uint256"}],"name":"compareInt","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"inputs":[{"name":"_creator","type":"address"},{"name":"_cond","type":"string"},{"name":"_money","type":"uint8"},{"name":"_endDay","type":"uint8"},{"name":"_endMonth","type":"uint8"},{"name":"_endYear","type":"uint8"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]
+var instance = eth.contract(abi).at("0x458474d411653f3a07f6c290412a7382bcb436e7")
+instance.compareInt("<=",3,4)
+instance.stringToBytes32("hola")
+instance.string_tobytes("hola")
+instance.stringToInt("hola")
+instance.stringToUint("hola")
+instance.stringToUint("8")
+instance.stringToUint("9")
+var abi = [{"constant":true,"inputs":[],"name":"creator","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"cond","type":"string"}],"name":"createConditions","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"s","type":"string"}],"name":"stringToUint","outputs":[{"name":"result","type":"uint256"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"_op","type":"string"},{"name":"realValue","type":"string"},{"name":"compareValue","type":"string"}],"name":"compareString","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"s1","type":"string"},{"name":"s2","type":"string"}],"name":"equal","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"_person","type":"address"}],"name":"checkConditionFor","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"a","type":"bytes32"},{"name":"b","type":"bytes32"}],"name":"checkBytes","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"data","type":"bytes32"}],"name":"bytes32ToString","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"i","type":"uint16"},{"name":"j","type":"uint16"}],"name":"getChecker","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_cond","type":"string"}],"name":"setChecker","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"name","type":"string"},{"name":"dni","type":"string"},{"name":"age","type":"uint8"}],"name":"checkConditionInCase","outputs":[{"name":"","type":"uint256"},{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_person","type":"address"}],"name":"check","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"source","type":"string"}],"name":"stringToBytes32","outputs":[{"name":"result","type":"bytes32"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":false,"inputs":[{"name":"_endDay","type":"uint8"},{"name":"_endMonth","type":"uint8"},{"name":"_endYear","type":"uint8"}],"name":"isEnded","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"op","type":"string"},{"name":"realValue","type":"uint8"},{"name":"compareValue","type":"uint256"}],"name":"compareInt","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"inputs":[{"name":"_creator","type":"address"},{"name":"_cond","type":"string"},{"name":"_money","type":"uint8"},{"name":"_endDay","type":"uint8"},{"name":"_endMonth","type":"uint8"},{"name":"_endYear","type":"uint8"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]
+var instance = eth.contract(abi).at("0xfedba159a4e1eaa371d1515d101b2d7325fe3d42")
+instance.stringToUint("9")
+instance.stringToBytes32("hola")
+instance.checkConditionInCase("hola","g",8)
+var abi = [{"constant":true,"inputs":[],"name":"creator","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"cond","type":"string"}],"name":"createConditions","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"s","type":"string"}],"name":"stringToUint","outputs":[{"name":"result","type":"uint256"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"_op","type":"string"},{"name":"realValue","type":"string"},{"name":"compareValue","type":"string"}],"name":"compareString","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"s1","type":"string"},{"name":"s2","type":"string"}],"name":"equal","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"_person","type":"address"}],"name":"checkConditionFor","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"a","type":"bytes32"},{"name":"b","type":"bytes32"}],"name":"checkBytes","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"data","type":"bytes32"}],"name":"bytes32ToString","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"i","type":"uint16"},{"name":"j","type":"uint16"}],"name":"getChecker","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_cond","type":"string"}],"name":"setChecker","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"name","type":"string"},{"name":"dni","type":"string"},{"name":"age","type":"uint8"}],"name":"checkConditionInCase","outputs":[{"name":"log","type":"uint256"},{"name":"_check","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_person","type":"address"}],"name":"check","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"source","type":"string"}],"name":"stringToBytes32","outputs":[{"name":"result","type":"bytes32"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":false,"inputs":[{"name":"_endDay","type":"uint8"},{"name":"_endMonth","type":"uint8"},{"name":"_endYear","type":"uint8"}],"name":"isEnded","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"op","type":"string"},{"name":"realValue","type":"uint8"},{"name":"compareValue","type":"uint256"}],"name":"compareInt","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"inputs":[{"name":"_creator","type":"address"},{"name":"_cond","type":"string"},{"name":"_money","type":"uint8"},{"name":"_endDay","type":"uint8"},{"name":"_endMonth","type":"uint8"},{"name":"_endYear","type":"uint8"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]
+var instance = eth.contract(abi).at("0x1fdc50db95b8d6e1b4b330b2b661dacb991796226af5c68ddd6c87d227f1731f")
+instance.checkConditionInCase("hola","g",8)
+var instance = eth.contract(abi).at("0xa96a0e4dd6d1f58258eaae18a37361314ed5b6be")
+instance.checkConditionInCase("hola","g",8)
+eth.pendingTransactions
+var abi = [{"constant":true,"inputs":[{"name":"x","type":"string"}],"name":"a","outputs":[{"name":"","type":"bytes32"},{"name":"","type":"string"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":false,"inputs":[{"name":"b","type":"bool"}],"name":"setCheck","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_op","type":"string"},{"name":"realValue","type":"string"},{"name":"compareValue","type":"string"}],"name":"compareString","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"s1","type":"string"},{"name":"s2","type":"string"}],"name":"equal","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[],"name":"getCheck","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"cond","type":"string"},{"name":"name","type":"string"},{"name":"dni","type":"string"},{"name":"age","type":"uint8"}],"name":"checkConditionFor","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"op","type":"string"},{"name":"realValue","type":"uint8"},{"name":"compareValue","type":"uint256"}],"name":"compareInt","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"}]
+var instance = eth.contract(abi).at("0x28af249d35c29626c9d31ca2b26f5308fe9fa33d")
+instance.getCheck()
+instance.setCheck(true)
+eth.defaultAccount = eth.coinbase
+instance.setCheck(true)
+eth.pendingTransactions
+instance.getCheck()
+var abi = [{"constant":false,"inputs":[{"name":"b","type":"bool"}],"name":"setCheck","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getCheck","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"}]
+var instance = eth.contract(abi).at("0xf762e5f3dc49ce52761f72371a1f013a7d37a917")
+instance.setCheck(true)
+eth.defaultAccount = eth.coinbase
+instance.setCheck(true)
+eth.pendingTransactions
+instance.getCheck()
+var abi = [{"constant":false,"inputs":[{"name":"b","type":"bool"}],"name":"setCheck","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getCheck","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"}]
+var instance = eth.contract(abi).at("0x275056a7f534ba3acd21e423e8f2038f2ab0e949")
+eth.defaultAccount = eth.coinbase
+instance.getCheck()
+instance.setCheck(true)
+eth.pendingTransactions
+instance.getCheck()
+var abi = [{"constant":true,"inputs":[{"name":"x","type":"string"}],"name":"a","outputs":[{"name":"","type":"bytes32"},{"name":"","type":"string"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":false,"inputs":[{"name":"name","type":"string"},{"name":"dni","type":"string"},{"name":"age","type":"uint8"}],"name":"checkConditionFor","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"variable","type":"string"},{"name":"operator","type":"string"},{"name":"value","type":"string"}],"name":"addCond","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"b","type":"bool"}],"name":"setCheck","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_op","type":"string"},{"name":"realValue","type":"string"},{"name":"compareValue","type":"string"}],"name":"compareString","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"s1","type":"string"},{"name":"s2","type":"string"}],"name":"equal","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[],"name":"getCheck","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"data","type":"bytes32"}],"name":"bytes32ToString","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"source","type":"string"}],"name":"stringToBytes32","outputs":[{"name":"result","type":"bytes32"}],"payable":false,"stateMutability":"pure","type":"function"},{"constant":true,"inputs":[{"name":"op","type":"string"},{"name":"realValue","type":"uint8"},{"name":"compareValue","type":"uint256"}],"name":"compareInt","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"pure","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}];
+var myContract = eth.contract(abi);
+var cInstance = myContract.at("0x9a41599b360b4428ffa3eab70ae3a77cc957a996");
+eth.defaultAccount = "0x16860067f82c2d01b68d04c5da4f16be1a4247a1";
+console.log(cInstance.getCheck());
+cInstance.getCheck()
+cInstance.setCheck(True)
+cInstance.setCheck(true)
+cInstance.getCheck()
+cInstance.setCheck(true)
+eth.pendingTransactions
+cInstance.getCheck()
+var abi = [{"constant":true,"inputs":[],"name":"getAge","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"create","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}];
+var myContract = eth.contract(abi);
+var cInstance = myContract.at("0x39350d1f528fa0b1b9d4edd5cb32c3a3676e187c")
+eth.defaultAccount = "0x16860067f82c2d01b68d04c5da4f16be1a4247a1"
+console.log(cInstance.create());
+cInstance.create();
+var abi = [{"constant":true,"inputs":[],"name":"getAge","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"create","outputs":[{"name":"","type":"uint256"},{"name":"","type":"address"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"}];
+var myContract = eth.contract(abi);
+var cInstance = myContract.at("0x8a7da90f7f48fcfe060cf5c1ad66f3f5f16cd64a")
+eth.defaultAccount = "0x16860067f82c2d01b68d04c5da4f16be1a4247a1"
+console.log(cInstance.create());
+cInstance.create();
+miner.start(2)
+miner.stop()
+var usuari = eth.coinbase
+usuari
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x7ffc2fc47c74a0fb593d28528d9f6e5d46488d33"
+var quantitat = web3.toWei(5,"ether")
+eth.accounts
+eth.getBalance("0x1137a9722bb0d0bf14d5f2d701f5939b311c12ff")
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xc3f25f2e19f4dc7c4ebee61ce004069d8e7f47e4"
+var quantitat = web3.toWei(50,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xc3f25f2e19f4dc7c4ebee61ce004069d8e7f47e4"
+var quantitat = web3.toWei(50,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xc3f25f2e19f4dc7c4ebee61ce004069d8e7f47e4"
+var quantitat = web3.toWei(50,"ether")
+eth.accounts
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xc3f25f2e19f4dc7c4ebee61ce004069d8e7f47e4"
+var quantitat = web3.toWei(50,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+var usuariDesti = "0xc3f25f2e19f4dc7c4ebee61ce004069d8e7f47e4"
+eth.getBalance(usuariDesti)
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x6a81252103bf19b4e5717c81bc96087d6766967f"
+var quantitat = web3.toWei(50,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x8eef7b8ee2b45734bd59d1d214dbef32b2a77e87"
+var quantitat = web3.toWei(50,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x16860067f82c2d01b68d04c5da4f16be1a4247a1"
+var quantitat = web3.toWei(200,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x16860067f82c2d01b68d04c5da4f16be1a4247a1"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x16860067f82c2d01b68d04c5da4f16be1a4247a1"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xcd9b760b0ba8fc1620ff8f2a020564d769ebc8fd"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x73aa24ae253f4585f69841533a06ed714740c73d"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x73aa24ae253f4585f69841533a06ed714740c73d"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x751effe7f90c9e28f100f74970bb7f1aa817e330"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x751effe7f90c9e28f100f74970bb7f1aa817e330"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x751effe7f90c9e28f100f74970bb7f1aa817e330"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x94380b57a5517aff30c44b91013c10fe49b7e635"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x470f3e6825a5db34920720c00942f65521c445f5"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xc3bad53111cfbc5eb14373066f9ed9a9bf2b890a"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xbd39c03ecbe9b0c64194469b99e17e0984047a65"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x25474252a0a0f980649cff2598c72464d27e5a9b"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x4e22342ef62134b3bc70fb050745e6d1ab42e19e"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xa0350e18ffa0e79b37e887f99c0ebfc7e1beb0c3"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+var usuariDesti = "0xa0350e18ffa0e79b37e887f99c0ebfc7e1beb0c3"
+var quantitat = web3.toWei(100,"ether")
+miner.start(4)
+miner.stop()
+var usuariDesti = "0xa0350e18ffa0e79b37e887f99c0ebfc7e1beb0c3"
+var quantitat = web3.toWei(100,"ether")
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xa1d35abb2e634bef60ca8f53a4bff4e9497dfca5"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x0187cdd5eb8c48ff8da37b4762da96fff3ae11ce"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x8a934d097007827cf5c335bb51731c148337d549"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xf3f7fe8b4339acc62047abdc0f0d921d804a452b"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xf3f7fe8b4339acc62047abdc0f0d921d804a452b"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xf3f7fe8b4339acc62047abdc0f0d921d804a452b"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x6f6a8a413beb0c205a78b083ff3a86e8f07ec4f3"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x7b9eec1a5e6fdf65d1c80892d1c4404e5e03e40d"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0xecbaf8500f82c16bab892fd2f001146eb265483e"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+var usuari = eth.coinbase
+eth.getBalance(usuari)
+var usuariDesti = "0x94a789b5c7523e78b7ff9c05783f61fe9409410d"
+var quantitat = web3.toWei(100,"ether")
+eth.sendTransaction({from: usuari, to: usuariDesti, value: quantitat})
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
+miner.start(4)
+miner.stop()
