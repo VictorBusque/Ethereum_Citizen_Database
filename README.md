@@ -22,7 +22,7 @@ Now, to use the mainNode utilities provided in this repository, you should subst
 Then you will be able to use the MN_Send_ether.py script that given an account (usually from the eth_nodes datadir) and an amount of ether, is able to send this ether (requiring a transaction, and therefore, mining). With all of this you will be able to start using the Ethereum network successfully.
 
 Since the main function of mainNode is to mine, in mainNode_utils the mine_trans_auto.sh file is also available, which allows you to automatically mine when there are pending transactions.
-# Previous before being able to create the other nodes:
+# Previous steps before being able to create the other nodes:
 Once the mainNode is created, you have to create a Manager of your network. For this purpose, the following steps must be carried out:
 
 1.- Create an Administrative Entity:
