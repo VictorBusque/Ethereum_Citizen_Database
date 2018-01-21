@@ -27,7 +27,7 @@ Once the mainNode is created, you have to create a Manager of your network. For 
 
 1.- Create an Administrative Entity:
 
-To do so, it will be enough to create a new account ....
+To do so, it will be enough to create a new account.
 
 2.- Give ether to the new account:
 
@@ -39,9 +39,9 @@ Once we have given ether to the account, we can create the manager in the follow
 ```
 python PythonModules/injectContract.py SolidityContracts/Manager.sol <name> '4712388' '"<account>"'
 ```
-This step also needs to be mined.
+This step also needs mining.
 
-4.- Create the fitchero Manager.addr:
+4.- Create the file Manager.addr:
 
 For the program to work properly it is necessary to have the address of the contract Manager in the file Manager.addr inside the Data folder of ProgramFiles. To obtain the address you have to look in the file "ProgramFiles/Data/ContractDB.db".
 
